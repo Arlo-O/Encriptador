@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+:root {
+    --color-primario: #D8EFD3; 
+    --color-secundario: #95D2B3;
+    --color-terciario: #55AD9B;
+    --color-cuarto: #F1F8E8;
+
+    --fuente-Inria: 'Inria Sans', sans-serif;
+    --fuente-Inter: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--color-primario);
+    width: 100vw;
+}
+
+header {
+    width: 100vw;
+    background-color: var(--color-terciario);
+    height: 100px;
+    padding: 2% 0% 0% 5%;
+    font-family: var(--fuente-Inria);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 15%;
+}
+
+.main__seccion__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 60vh;
+    font-family: var(--fuente-Inter);
+}
+
+.main__area_texto {
+    width: 40vw;
+    font-size: 18px;
+    height: 40vh;
+    border-style: none;
+    padding: 10px;
+    resize: none;
+}
+
+.main__advertencia {
+    font-size: 12px;
+}
+
+.main_input_div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main__encriptar__btn{
+    background-color: var(--color-terciario);
+    padding: 16px 24px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    border-style: none;
+}
+
+.main__desencriptar__btn:disabled{
+    background-color: #D8DFE8;
+    padding: 16px 24px;
+    font-size: 18px;
+    color: var(--color-terciario);
+    font-weight: 500;
+    border: 1px solid var(--color-terciario);
+}
+
+.main__desencriptar__btn:enabled{
+    background-color: var(--color-terciario);
+    color: white;
+    border-style: none;
+}
+
+.imagen__candado {
+    width: 256px;
+    height: 256px;
+}
+
+.main__seccion__texto {
+    padding: 30px 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--fuente-Inter);
+}
+.texto_historial_mensaje {
+    font-size: 20px;
+    font-weight: 600;
+}
+.texto_mensaje_instruccion {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    main{
+        flex-direction: column;
+        width: 100vw;
+    }
+    .main__seccion__input {
+        width: 70vw;
+        height: 60vh;
+    }
+    .main__area_texto{
+        width: 70vw;
+        height: 50vh;
+    }
+    .main__seccion__texto {
+        margin-top: 50px;
+    }
+    .imagen__candado{
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        font-size: 14px;
+    }
+    .main__area_texto {
+        height: 40vh;
+    }
+    .main_input_div {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Encriptador</title>
 </head>
 <body>
     <header>
-        <h1>Encripte sus datos de forma segura</h1>
+        <h1>Encripte su mesaje rápido y seguro.</h1>
     </header>
     <main>
-        <section></section>
-        <section></section>
+        <section class="main__seccion__input">
+            <textarea class="main__area_texto" name="area_texto" id="area_texto_original" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="main__advertencia">Solo letras minúculas y sin acentos</p>
+            <div class="main_input_div">
+                <button class="main__encriptar__btn">Encriptar</button>
+                <button class="main__desencriptar__btn" disabled>Desencriptar</button>
+            </div>
+        </section>
+        <section class="main__seccion__texto" >
+            <img src="assets/icono_candado.png" alt="" class="imagen__candado">
+            <p class="texto_historial_mensaje">Ningún mensaje reciente.</p>
+            <p class="texto_mensaje_instruccion">Ingresa el texto a encriptar o desencriptar.</p>
+        </section>
     </main>
     <footer></footer>
 </body>
