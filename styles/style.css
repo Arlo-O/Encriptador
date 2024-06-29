@@ -30,6 +30,7 @@ header {
     font-family: var(--fuente-Inria);
     font-weight: bold;
     font-size: 20px;
+    border-radius: 0;
 }
 
 main {
@@ -74,6 +75,16 @@ main {
     border-style: none;
 }
 
+#copiarBTN{
+    background-color: var(--color-secundario);
+    padding: 12px 20px;
+    font-size: 18px;
+    color: black;
+    font-weight: 300;
+    border-style: none;
+    display: none;
+}
+
 .main__desencriptar__btn:disabled{
     background-color: #D8DFE8;
     padding: 16px 24px;
@@ -87,6 +98,8 @@ main {
     background-color: var(--color-terciario);
     color: white;
     border-style: none;
+    padding: 16px 24px;
+    font-size: 18px;
 }
 
 .imagen__candado {
@@ -95,6 +108,7 @@ main {
 }
 
 .main__seccion__texto {
+    width: 25vw;
     padding: 30px 30px;
     background-color: white;
     display: flex;
@@ -108,7 +122,11 @@ main {
     font-weight: 600;
 }
 .texto_mensaje_instruccion {
+    padding: 0px 15px;
+    width: inherit;
     font-size: 14px;
+    word-wrap: break-word;
+    text-overflow: normal;
 }
 
 @media (max-width: 768px) {
@@ -126,9 +144,13 @@ main {
     }
     .main__seccion__texto {
         margin-top: 50px;
+        width: 70vw;
     }
     .imagen__candado{
         display: none;
+    }
+    .copiarTextoBTN {
+        margin-top: 10px;
     }
 }
 
@@ -143,4 +165,5 @@ main {
         flex-direction: column;
         justify-content: space-between;
     }
+    
 }
